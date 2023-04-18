@@ -9,6 +9,8 @@ test('testing sorting', () => {
     defence: 40,
   };
 
+  object.__proto__.adress = 456;
+
   const targetobject = [
     { key: 'name', value: 'мечник' },
     { key: 'level', value: 2 },
