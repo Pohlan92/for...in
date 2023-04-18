@@ -9,7 +9,11 @@ test('testing sorting', () => {
     defence: 40,
   };
 
-  object.__proto__.adress = 456;
+  const objectProto = {
+    adress: 'Moscow',
+  };
+
+  Object.setPrototypeOf(object, objectProto);
 
   const targetobject = [
     { key: 'name', value: 'мечник' },

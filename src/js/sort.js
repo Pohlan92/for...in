@@ -1,6 +1,10 @@
 export default function sortingByParam(obj, arr) {
   const ordedObj = []; // массив для сборки отсортированных значений
   const copyObj = { ...obj }; // копия объекта
+  const objectProto = {
+    adress: 'Moscow',
+  };
+  Object.setPrototypeOf(copyObj, objectProto);
   const tempArr = []; // временный массив
 
   arr.forEach((elem) => { // записываем свойства которые надо упорядочить в итоговый массив
